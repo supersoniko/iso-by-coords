@@ -2,7 +2,6 @@ import GeoJsonPolygonLookupTool from 'geojson-geometries-lookup';
 import getMap, {Feature, GeoMap} from 'countries-maritime-10m-extended';
 import {ConfigureCountryOptions, CountryISO} from './typings';
 
-
 const configureCountryIso = (options: ConfigureCountryOptions) => {
 	const map: GeoMap = getMap();
 	const worldLookup = new GeoJsonPolygonLookupTool(map);
@@ -26,6 +25,6 @@ const configureCountryIso = (options: ConfigureCountryOptions) => {
 			return [];
 		}
 	};
-}
+};
 
 export default configureCountryIso;

@@ -4,7 +4,6 @@
 		"plugin:@typescript-eslint/recommended",
 		"prettier",
 		"prettier/@typescript-eslint",
-		"plugin:react/recommended",
 		"xo/esnext"
 	],
 	"plugins": ["@typescript-eslint", "prettier"],

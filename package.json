@@ -1,75 +1,91 @@
 {
-  "name": "iso-by-coords",
-  "version": "1.0.1",
-  "description": "Get a country's ISO code by coordinates ",
-  "main": "./lib/index.js",
-  "types": "./lib/index.d.ts",
-  "scripts": {
-    "test": "npm run lint && jest",
-    "build": "del-cli lib && tsc",
-    "lint": "eslint . --ext .js,.ts --ignore-path .gitignore",
-    "fix": "npm run lint -- --fix"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/supersoniko/iso-by-coords.git"
-  },
-  "author": "Sacha Reinert",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/supersoniko/iso-by-coords/issues"
-  },
-  "homepage": "https://github.com/supersoniko/iso-by-coords#readme",
-  "devDependencies": {
-    "@types/jest": "^24.9.0",
-    "@types/node": "^13.1.7",
-    "@typescript-eslint/eslint-plugin": "^2.16.0",
-    "@typescript-eslint/parser": "^2.16.0",
-    "del": "^5.1.0",
-    "del-cli": "^3.0.0",
-    "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.9.0",
-    "eslint-config-xo": "^0.27.2",
-    "eslint-plugin-prettier": "^3.1.2",
-    "jest": "^24.9.0",
-    "prettier": "^1.19.1",
-    "ts-jest": "^24.3.0",
-    "typescript": "^3.7.5"
-  },
-  "jest": {
-    "transform": {
-      "^.+\\.tsx?$": "ts-jest"
-    },
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "node"
-    ]
-  },
-  "keywords": [
-    "country",
-    "countries",
-    "get",
-    "alpha-3",
-    "alpha-2",
-    "country code",
-    "3166",
-    "ISO",
-    "maritime",
-    "sea",
-    "earth",
-    "world",
-    "administration",
-    "area",
-    "political",
-    "boundaries"
-  ],
-  "dependencies": {
-    "countries-maritime-10m-extended": "^1.0.2",
-    "geojson-geometries-lookup": "^0.3.1"
-  }
+	"name": "iso-by-coords",
+	"version": "1.0.1",
+	"description": "Get a country's ISO code by coordinates ",
+	"main": "./lib/index.js",
+	"types": "./lib/index.d.ts",
+	"scripts": {
+		"test": "npm run lint && jest",
+		"build": "del-cli lib && tsc",
+		"lint": "eslint src --ext .ts,.js,.tsx --fix"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/supersoniko/iso-by-coords.git"
+	},
+	"author": "Sacha Reinert",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/supersoniko/iso-by-coords/issues"
+	},
+	"homepage": "https://github.com/supersoniko/iso-by-coords#readme",
+	"dependencies": {
+		"countries-maritime-10m-extended": "^1.0.2",
+		"geojson-geometries-lookup": "^0.3.1"
+	},
+	"devDependencies": {
+		"@types/jest": "^24.9.0",
+		"@types/node": "^13.1.7",
+		"@typescript-eslint/eslint-plugin": "^2.16.0",
+		"@typescript-eslint/parser": "^2.16.0",
+		"del": "^5.1.0",
+		"del-cli": "^3.0.0",
+		"eslint": "^6.8.0",
+		"eslint-config-prettier": "^6.9.0",
+		"eslint-config-xo": "^0.27.2",
+		"eslint-plugin-prettier": "^3.1.2",
+		"husky": "^4.0.10",
+		"jest": "^24.9.0",
+		"lint-staged": "^9.5.0",
+		"prettier": "^1.19.1",
+		"ts-jest": "^24.3.0",
+		"typescript": "^3.7.5"
+	},
+	"jest": {
+		"transform": {
+			"^.+\\.tsx?$": "ts-jest"
+		},
+		"testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+		"moduleFileExtensions": [
+			"ts",
+			"tsx",
+			"js",
+			"jsx",
+			"json",
+			"node"
+		]
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"*.{ts,tsx}": [
+			"eslint",
+			"jest --findRelatedTests"
+		],
+		"*.{js,ts,tsx,json,css,scss,md,eslintrc,prettierrc}": [
+			"prettier --write",
+			"git add"
+		]
+	},
+	"keywords": [
+		"country",
+		"countries",
+		"get",
+		"alpha-3",
+		"alpha-2",
+		"country code",
+		"3166",
+		"ISO",
+		"maritime",
+		"sea",
+		"earth",
+		"world",
+		"administration",
+		"area",
+		"political",
+		"boundaries"
+	]
 }
