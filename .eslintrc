@@ -1,0 +1,25 @@
+{
+	"parser": "@typescript-eslint/parser",
+	"extends": [
+		"plugin:@typescript-eslint/recommended",
+		"prettier",
+		"prettier/@typescript-eslint",
+		"plugin:react/recommended",
+		"xo/esnext"
+	],
+	"plugins": ["@typescript-eslint", "prettier"],
+	"rules": {
+		"prettier/prettier": "error",
+		"semi": "off",
+		"@typescript-eslint/semi": ["error"],
+		"operator-linebreak": 0,
+		"space-before-function-paren": 0
+	},
+	"env": {
+		"jest": true,
+		"node": true
+	},
+	"globals": {
+		"window": true
+	}
+}
