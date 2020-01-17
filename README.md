@@ -24,7 +24,7 @@ getIsoCodesAlpha2(50.95148037338329, 5.350969164113395); // returns  [BE]
 getIsoCodesAlpha3(50.95148037338329, 5.350969164113395); // returns [BEL]
 ```
 
-###JavaScript
+### JavaScript
 
 ```javascript
 const configureCountryIso = require('iso-by-coords').default;
