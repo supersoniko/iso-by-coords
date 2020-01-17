@@ -86,6 +86,8 @@
 		"administration",
 		"area",
 		"political",
-		"boundaries"
+		"boundaries",
+		"coords",
+		"coordinates"
 	]
 }
