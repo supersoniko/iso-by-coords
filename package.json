@@ -1,6 +1,6 @@
 {
 	"name": "iso-by-coords",
-	"version": "2.0.0",
+	"version": "2.0.1",
 	"description": "Get a country's ISO code by coordinates ",
 	"main": "./lib/index.js",
 	"types": "./lib/index.d.ts",
