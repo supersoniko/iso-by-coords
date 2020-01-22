@@ -20,7 +20,6 @@
 	},
 	"homepage": "https://github.com/supersoniko/iso-by-coords#readme",
 	"dependencies": {
-		"countries-maritime-10m-extended": "^1.0.2",
 		"geojson-geometries-lookup": "^0.3.1"
 	},
 	"devDependencies": {
